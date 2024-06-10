@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            margin-top: 50px;
+            flex: 1;
+        }
+
+        .footer {
+            background-color: #001b66; /* Azul marino */
+            color: #ffffff; /* Texto blanco */
+            padding: 40px 0;
+        }
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+        .footer-column h3 {
+            border-bottom: 1px solid #ffffff;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .footer-column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        .footer-column ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+        .footer-logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .footer-logo img {
+            height: 60px;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            background-color: #001b66; /* Azul más oscuro */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Sign in</div>
+                    <div class="card-body">
+                        <form id="registerForm" method="POST" action="/register">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">Fecha de nacimiento</label>
+                                <input type="date" class="form-control" id="dob" name="dob" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstname">Nombre</label>
+                                <input type="text" class="form-control" id="firstname" name="firstname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="apellidoPaterno">Apellido Paterno</label>
+                                <input type="text" class="form-control" id="apellidoPaterno" name="apellidoPaterno" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="apellidoMaterno">Apellido Materno</label>
+                                <input type="text" class="form-control" id="apellidoMaterno" name="apellidoMaterno" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </form>
+                        <hr>
+                        <p class="text-center mb-0">
+                            <a href="/">Regresar al inicio de sesión</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+        
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="static/logo la salle.png" alt="Logo La Salle">
+            </div>
+            <div class="footer-column">
+                <h3>Oferta educativa</h3>
+                <ul>
+                    <li><a href="#">Preparatoria</a></li>
+                    <li><a href="#">Licenciaturas</a></li>
+                    <li><a href="#">Especialidades</a></li>
+                    <li><a href="#">Maestrías</a></li>
+                    <li><a href="#">Doctorados</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Nosotros</h3>
+                <ul>
+                    <li><a href="#">La Salle Hoy</a></li>
+                    <li><a href="#">Sistema y Red La Salle</a></li>
+                    <li><a href="#">Identidad</a></li>
+                    <li><a href="#">Historia</a></li>
+                    <li><a href="#">Ideario</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Experiencia La Salle</h3>
+                <ul>
+                    <li><a href="#">Acreditaciones</a></li>
+                    <li><a href="#">Área curricular</a></li>
+                    <li><a href="#">Barrio universitario</a></li>
+                    <li><a href="#">Comunidad para la vida</a></li>
+                    <li><a href="#">Formación integral</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Universidad La Salle México. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#registerForm').submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: '/register',
+                    data: $('#registerForm').serialize(),
+                    success: function (response) {
+                        alert(response);
+                        // Aquí puedes redirigir a otra página o hacer lo que necesites después del registro
+                        window.location.href = "/login";
+                    },
+                    error: function (error) {
+                        alert('Error en el registro.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

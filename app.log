@@ -1,0 +1,273 @@
+2024-04-17 20:21:22,652 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:21:22,660 - WARNING -  * Debugger is active!
+2024-04-17 20:21:22,660 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:21:22,902 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:21:22,902 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:21:25,110 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:21:25,122 - WARNING -  * Debugger is active!
+2024-04-17 20:21:25,134 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:21:53,253 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:21:53,254 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:21:53,257 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:21:53,257 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:21:55,144 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:21:55,168 - WARNING -  * Debugger is active!
+2024-04-17 20:21:55,168 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:22:17,648 - INFO - 127.0.0.1 - - [17/Apr/2024 20:22:17] "POST /alta_materia HTTP/1.1" 200 -
+2024-04-17 20:22:19,180 - INFO - 127.0.0.1 - - [17/Apr/2024 20:22:19] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:22:31,746 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:22:31,777 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-17 20:22:31,778 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-17 20:22:31,782 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:22:32,422 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:22:32,422 - WARNING -  * Debugger is active!
+2024-04-17 20:22:32,422 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:22:45,912 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:22:45,930 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-17 20:22:45,930 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-17 20:22:45,930 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:22:46,653 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:22:46,653 - WARNING -  * Debugger is active!
+2024-04-17 20:22:46,653 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:22:50,672 - INFO - 127.0.0.1 - - [17/Apr/2024 20:22:50] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:22:59,785 - INFO - 127.0.0.1 - - [17/Apr/2024 20:22:59] "GET / HTTP/1.1" 200 -
+2024-04-17 20:23:03,269 - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+2024-04-17 20:23:04,111 - DEBUG - https://www.googleapis.com:443 "POST /identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDakXI8n291Wxk5tCY9ObRn2dMWefnGOUc HTTP/1.1" 200 None
+2024-04-17 20:23:04,126 - INFO - 127.0.0.1 - - [17/Apr/2024 20:23:04] "POST /login HTTP/1.1" 200 -
+2024-04-17 20:23:05,590 - INFO - 127.0.0.1 - - [17/Apr/2024 20:23:05] "GET /home HTTP/1.1" 200 -
+2024-04-17 20:23:07,511 - INFO - 127.0.0.1 - - [17/Apr/2024 20:23:07] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:23:19,633 - DEBUG - Starting new HTTPS connection (1): proyfinalpweb-default-rtdb.firebaseio.com:443
+2024-04-17 20:23:20,566 - DEBUG - https://proyfinalpweb-default-rtdb.firebaseio.com:443 "GET /users/eFfZ5vtSR2dKbFi0G6Yp89Zgdhl1/materia.json HTTP/1.1" 200 104
+2024-04-17 20:23:20,566 - INFO - [{'Clave': 'clave', 'FechaFin': '2024-04-22', 'FechaInicio': '2024-04-05', 'Nombre': 'materia', 'Semestre': '3'}]
+2024-04-17 20:23:20,577 - INFO - 127.0.0.1 - - [17/Apr/2024 20:23:20] "POST /alta_materia HTTP/1.1" 200 -
+2024-04-17 20:23:22,336 - INFO - 127.0.0.1 - - [17/Apr/2024 20:23:22] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:24:18,181 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:24:18,192 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:24:18,192 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:24:18,192 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:24:19,080 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:24:19,939 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:24:19,939 - WARNING -  * Debugger is active!
+2024-04-17 20:24:19,939 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:24:30,082 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:24:30,122 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-17 20:24:30,122 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-17 20:24:30,129 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:24:30,776 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:24:30,776 - WARNING -  * Debugger is active!
+2024-04-17 20:24:30,776 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:24:35,358 - INFO - 127.0.0.1 - - [17/Apr/2024 20:24:35] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:24:39,764 - INFO - 127.0.0.1 - - [17/Apr/2024 20:24:39] "GET / HTTP/1.1" 200 -
+2024-04-17 20:24:41,335 - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+2024-04-17 20:24:42,187 - DEBUG - https://www.googleapis.com:443 "POST /identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDakXI8n291Wxk5tCY9ObRn2dMWefnGOUc HTTP/1.1" 200 None
+2024-04-17 20:24:42,203 - INFO - 127.0.0.1 - - [17/Apr/2024 20:24:42] "POST /login HTTP/1.1" 200 -
+2024-04-17 20:24:43,512 - INFO - 127.0.0.1 - - [17/Apr/2024 20:24:43] "GET /home HTTP/1.1" 200 -
+2024-04-17 20:24:45,125 - INFO - 127.0.0.1 - - [17/Apr/2024 20:24:45] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:24:50,791 - DEBUG - Starting new HTTPS connection (1): proyfinalpweb-default-rtdb.firebaseio.com:443
+2024-04-17 20:24:51,584 - DEBUG - https://proyfinalpweb-default-rtdb.firebaseio.com:443 "GET /users/eFfZ5vtSR2dKbFi0G6Yp89Zgdhl1/materia.json HTTP/1.1" 200 104
+2024-04-17 20:24:51,584 - INFO - [{'Clave': 'clave', 'FechaFin': '2024-04-22', 'FechaInicio': '2024-04-05', 'Nombre': 'materia', 'Semestre': '3'}]
+2024-04-17 20:24:51,584 - INFO - 127.0.0.1 - - [17/Apr/2024 20:24:51] "POST /alta_materia HTTP/1.1" 200 -
+2024-04-17 20:24:53,858 - INFO - 127.0.0.1 - - [17/Apr/2024 20:24:53] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:25:14,079 - DEBUG - https://proyfinalpweb-default-rtdb.firebaseio.com:443 "GET /users/eFfZ5vtSR2dKbFi0G6Yp89Zgdhl1/materia.json HTTP/1.1" 200 104
+2024-04-17 20:25:14,079 - INFO - [{'Clave': 'clave', 'FechaFin': '2024-04-22', 'FechaInicio': '2024-04-05', 'Nombre': 'materia', 'Semestre': '3'}]
+2024-04-17 20:25:14,079 - INFO - 127.0.0.1 - - [17/Apr/2024 20:25:14] "POST /alta_materia HTTP/1.1" 200 -
+2024-04-17 20:25:16,109 - INFO - 127.0.0.1 - - [17/Apr/2024 20:25:16] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:25:55,039 - DEBUG - https://proyfinalpweb-default-rtdb.firebaseio.com:443 "GET /users/eFfZ5vtSR2dKbFi0G6Yp89Zgdhl1/materia.json HTTP/1.1" 200 104
+2024-04-17 20:25:55,039 - INFO - [{'Clave': 'clave', 'FechaFin': '2024-04-22', 'FechaInicio': '2024-04-05', 'Nombre': 'materia', 'Semestre': '3'}]
+2024-04-17 20:25:55,039 - INFO - 127.0.0.1 - - [17/Apr/2024 20:25:55] "POST /alta_materia HTTP/1.1" 200 -
+2024-04-17 20:25:56,306 - INFO - 127.0.0.1 - - [17/Apr/2024 20:25:56] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:25:58,949 - DEBUG - https://proyfinalpweb-default-rtdb.firebaseio.com:443 "GET /users/eFfZ5vtSR2dKbFi0G6Yp89Zgdhl1/materia.json HTTP/1.1" 200 104
+2024-04-17 20:25:58,949 - INFO - [{'Clave': 'clave', 'FechaFin': '2024-04-22', 'FechaInicio': '2024-04-05', 'Nombre': 'materia', 'Semestre': '3'}]
+2024-04-17 20:25:58,949 - INFO - 127.0.0.1 - - [17/Apr/2024 20:25:58] "POST /alta_materia HTTP/1.1" 200 -
+2024-04-17 20:26:01,625 - INFO - 127.0.0.1 - - [17/Apr/2024 20:26:01] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:26:04,851 - INFO -  * Detected change in 'C:\\Users\\anton\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pyrebase\\pyrebase.py', reloading
+2024-04-17 20:26:05,234 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:26:06,013 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:26:06,021 - WARNING -  * Debugger is active!
+2024-04-17 20:26:06,021 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:26:06,849 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:26:06,850 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:26:07,230 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:26:07,888 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:26:07,888 - WARNING -  * Debugger is active!
+2024-04-17 20:26:07,888 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:26:08,109 - INFO - 127.0.0.1 - - [17/Apr/2024 20:26:08] "POST /alta_materia HTTP/1.1" 200 -
+2024-04-17 20:26:09,624 - INFO - 127.0.0.1 - - [17/Apr/2024 20:26:09] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:27:36,605 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:27:36,607 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:27:36,609 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:27:36,609 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:27:37,302 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:27:38,171 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:27:38,187 - WARNING -  * Debugger is active!
+2024-04-17 20:27:38,187 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:27:42,193 - INFO - 127.0.0.1 - - [17/Apr/2024 20:27:42] "POST /alta_materia HTTP/1.1" 200 -
+2024-04-17 20:27:44,018 - INFO - 127.0.0.1 - - [17/Apr/2024 20:27:44] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:28:11,178 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:28:11,202 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-17 20:28:11,202 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-17 20:28:11,209 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:28:11,950 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:28:11,958 - WARNING -  * Debugger is active!
+2024-04-17 20:28:11,958 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:28:20,463 - INFO - 127.0.0.1 - - [17/Apr/2024 20:28:20] "GET / HTTP/1.1" 200 -
+2024-04-17 20:28:23,815 - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+2024-04-17 20:28:24,402 - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+2024-04-17 20:28:24,750 - DEBUG - https://www.googleapis.com:443 "POST /identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDakXI8n291Wxk5tCY9ObRn2dMWefnGOUc HTTP/1.1" 200 None
+2024-04-17 20:28:24,760 - INFO - 127.0.0.1 - - [17/Apr/2024 20:28:24] "POST /login HTTP/1.1" 200 -
+2024-04-17 20:28:25,290 - DEBUG - https://www.googleapis.com:443 "POST /identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDakXI8n291Wxk5tCY9ObRn2dMWefnGOUc HTTP/1.1" 200 None
+2024-04-17 20:28:25,290 - INFO - 127.0.0.1 - - [17/Apr/2024 20:28:25] "POST /login HTTP/1.1" 200 -
+2024-04-17 20:28:26,126 - INFO - 127.0.0.1 - - [17/Apr/2024 20:28:26] "GET /home HTTP/1.1" 200 -
+2024-04-17 20:28:27,672 - INFO - 127.0.0.1 - - [17/Apr/2024 20:28:27] "GET /home HTTP/1.1" 200 -
+2024-04-17 20:28:29,209 - INFO - 127.0.0.1 - - [17/Apr/2024 20:28:29] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:28:44,076 - DEBUG - Starting new HTTPS connection (1): proyfinalpweb-default-rtdb.firebaseio.com:443
+2024-04-17 20:28:44,926 - DEBUG - https://proyfinalpweb-default-rtdb.firebaseio.com:443 "GET /users/eFfZ5vtSR2dKbFi0G6Yp89Zgdhl1/materia.json HTTP/1.1" 200 104
+2024-04-17 20:28:44,942 - INFO - [{'Clave': 'clave', 'FechaFin': '2024-04-22', 'FechaInicio': '2024-04-05', 'Nombre': 'materia', 'Semestre': '3'}]
+2024-04-17 20:28:44,990 - DEBUG - https://proyfinalpweb-default-rtdb.firebaseio.com:443 "PUT /users/eFfZ5vtSR2dKbFi0G6Yp89Zgdhl1/materia/%5B%7B'Clave':%20'clave',%20'FechaFin':%20'2024-04-22',%20'FechaInicio':%20'2024-04-05',%20'Nombre':%20'materia',%20'Semestre':%20'3'%7D%5D.json HTTP/1.1" 400 54
+2024-04-17 20:28:45,001 - INFO - 127.0.0.1 - - [17/Apr/2024 20:28:45] "POST /alta_materia HTTP/1.1" 200 -
+2024-04-17 20:30:24,669 - INFO - 127.0.0.1 - - [17/Apr/2024 20:30:24] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:32:15,699 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:32:15,707 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:32:15,707 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:32:16,787 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:32:17,557 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:32:17,578 - WARNING -  * Debugger is active!
+2024-04-17 20:32:17,578 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:32:45,631 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:32:45,631 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:32:45,639 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:32:45,639 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:32:45,836 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:32:46,493 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:32:46,508 - WARNING -  * Debugger is active!
+2024-04-17 20:32:46,524 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:32:48,209 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:32:48,209 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:32:48,732 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:32:49,480 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:32:49,496 - WARNING -  * Debugger is active!
+2024-04-17 20:32:49,496 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:32:54,215 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:32:54,231 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-17 20:32:54,231 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-17 20:32:54,231 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:32:54,962 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:32:54,981 - WARNING -  * Debugger is active!
+2024-04-17 20:32:54,981 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:33:11,524 - INFO - 127.0.0.1 - - [17/Apr/2024 20:33:11] "GET / HTTP/1.1" 200 -
+2024-04-17 20:33:13,152 - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+2024-04-17 20:33:14,021 - DEBUG - https://www.googleapis.com:443 "POST /identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDakXI8n291Wxk5tCY9ObRn2dMWefnGOUc HTTP/1.1" 200 None
+2024-04-17 20:33:14,022 - INFO - 127.0.0.1 - - [17/Apr/2024 20:33:14] "POST /login HTTP/1.1" 200 -
+2024-04-17 20:33:15,418 - INFO - 127.0.0.1 - - [17/Apr/2024 20:33:15] "GET /home HTTP/1.1" 200 -
+2024-04-17 20:33:17,234 - INFO - 127.0.0.1 - - [17/Apr/2024 20:33:17] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:33:33,293 - DEBUG - Starting new HTTPS connection (1): proyfinalpweb-default-rtdb.firebaseio.com:443
+2024-04-17 20:33:34,141 - DEBUG - https://proyfinalpweb-default-rtdb.firebaseio.com:443 "GET /users/eFfZ5vtSR2dKbFi0G6Yp89Zgdhl1/materia.json HTTP/1.1" 200 104
+2024-04-17 20:33:34,148 - INFO - [{'Clave': 'clave', 'FechaFin': '2024-04-22', 'FechaInicio': '2024-04-05', 'Nombre': 'materia', 'Semestre': '3'}]
+2024-04-17 20:33:34,204 - DEBUG - https://proyfinalpweb-default-rtdb.firebaseio.com:443 "PUT /users/eFfZ5vtSR2dKbFi0G6Yp89Zgdhl1/materia/1.json HTTP/1.1" 200 107
+2024-04-17 20:33:34,208 - INFO - 127.0.0.1 - - [17/Apr/2024 20:33:34] "POST /alta_materia HTTP/1.1" 200 -
+2024-04-17 20:33:35,714 - INFO - 127.0.0.1 - - [17/Apr/2024 20:33:35] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:34:32,802 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\app.py', reloading
+2024-04-17 20:34:33,524 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:34:34,297 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:34:34,297 - WARNING -  * Debugger is active!
+2024-04-17 20:34:34,313 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:36:19,848 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:36:19,853 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:36:19,853 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:36:20,818 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:36:21,641 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:36:21,657 - WARNING -  * Debugger is active!
+2024-04-17 20:36:21,657 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:37:51,029 - INFO - 127.0.0.1 - - [17/Apr/2024 20:37:51] "POST /alta_materia HTTP/1.1" 200 -
+2024-04-17 20:37:52,642 - INFO - 127.0.0.1 - - [17/Apr/2024 20:37:52] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:38:23,737 - INFO -  * Detected change in 'C:\\Users\\anton\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\flask\\app.py', reloading
+2024-04-17 20:38:23,739 - INFO - 127.0.0.1 - - [17/Apr/2024 20:38:23] "[35m[1mPOST /buscar_materia HTTP/1.1[0m" 500 -
+2024-04-17 20:38:23,846 - INFO - 127.0.0.1 - - [17/Apr/2024 20:38:23] "[36mGET /buscar_materia?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-04-17 20:38:23,846 - INFO - 127.0.0.1 - - [17/Apr/2024 20:38:23] "[36mGET /buscar_materia?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-04-17 20:38:23,879 - INFO - 127.0.0.1 - - [17/Apr/2024 20:38:23] "[36mGET /buscar_materia?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-04-17 20:38:24,113 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:38:24,593 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:38:24,593 - WARNING -  * Debugger is active!
+2024-04-17 20:38:24,609 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:38:33,792 - INFO - 127.0.0.1 - - [17/Apr/2024 20:38:33] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:38:42,971 - INFO - 127.0.0.1 - - [17/Apr/2024 20:38:42] "GET / HTTP/1.1" 200 -
+2024-04-17 20:38:44,585 - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+2024-04-17 20:38:44,867 - DEBUG - https://www.googleapis.com:443 "POST /identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDakXI8n291Wxk5tCY9ObRn2dMWefnGOUc HTTP/1.1" 200 None
+2024-04-17 20:38:44,879 - INFO - 127.0.0.1 - - [17/Apr/2024 20:38:44] "POST /login HTTP/1.1" 200 -
+2024-04-17 20:38:46,345 - INFO - 127.0.0.1 - - [17/Apr/2024 20:38:46] "GET /home HTTP/1.1" 200 -
+2024-04-17 20:38:47,935 - INFO - 127.0.0.1 - - [17/Apr/2024 20:38:47] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:38:51,130 - DEBUG - Starting new HTTPS connection (1): proyfinalpweb-default-rtdb.firebaseio.com:443
+2024-04-17 20:38:51,453 - DEBUG - https://proyfinalpweb-default-rtdb.firebaseio.com:443 "GET /users/eFfZ5vtSR2dKbFi0G6Yp89Zgdhl1/materia.json HTTP/1.1" 200 212
+2024-04-17 20:38:51,455 - INFO - 127.0.0.1 - - [17/Apr/2024 20:38:51] "POST /buscar_materia HTTP/1.1" 200 -
+2024-04-17 20:48:21,466 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:48:21,482 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:48:21,482 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:48:22,098 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:48:23,322 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:48:23,327 - WARNING -  * Debugger is active!
+2024-04-17 20:48:23,327 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:48:23,494 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:48:23,494 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:48:24,495 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:48:25,361 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:48:25,377 - WARNING -  * Debugger is active!
+2024-04-17 20:48:25,380 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:48:49,185 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:48:49,185 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:48:49,185 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:48:49,185 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:48:49,565 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:48:50,258 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:48:50,258 - WARNING -  * Debugger is active!
+2024-04-17 20:48:50,274 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:48:50,872 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:48:50,872 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:48:51,412 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:48:52,091 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:48:52,113 - WARNING -  * Debugger is active!
+2024-04-17 20:48:52,115 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:49:26,471 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:49:26,471 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:49:26,474 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:49:26,474 - INFO -  * Detected change in 'C:\\Users\\anton\\OneDrive\\Documentos\\Semestre 8\\Desarrollo Web\\Proy_final\\Controler.py', reloading
+2024-04-17 20:49:27,296 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:53:27,281 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:53:27,291 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-17 20:53:27,291 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-17 20:53:27,313 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:53:28,038 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:53:28,054 - WARNING -  * Debugger is active!
+2024-04-17 20:53:28,054 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:53:35,634 - INFO - 127.0.0.1 - - [17/Apr/2024 20:53:35] "GET / HTTP/1.1" 200 -
+2024-04-17 20:53:38,512 - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+2024-04-17 20:53:39,001 - DEBUG - https://www.googleapis.com:443 "POST /identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDakXI8n291Wxk5tCY9ObRn2dMWefnGOUc HTTP/1.1" 200 None
+2024-04-17 20:53:39,007 - INFO - 127.0.0.1 - - [17/Apr/2024 20:53:39] "POST /login HTTP/1.1" 200 -
+2024-04-17 20:53:40,343 - INFO - 127.0.0.1 - - [17/Apr/2024 20:53:40] "GET /home HTTP/1.1" 200 -
+2024-04-17 20:53:41,942 - INFO - 127.0.0.1 - - [17/Apr/2024 20:53:41] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:54:14,841 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:54:14,860 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-17 20:54:14,860 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-17 20:54:14,860 - INFO -  * Restarting with watchdog (windowsapi)
+2024-04-17 20:54:15,631 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-04-17 20:54:15,631 - WARNING -  * Debugger is active!
+2024-04-17 20:54:15,647 - INFO -  * Debugger PIN: 504-918-690
+2024-04-17 20:54:25,156 - INFO - 127.0.0.1 - - [17/Apr/2024 20:54:25] "GET / HTTP/1.1" 200 -
+2024-04-17 20:54:27,167 - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+2024-04-17 20:54:27,620 - DEBUG - https://www.googleapis.com:443 "POST /identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDakXI8n291Wxk5tCY9ObRn2dMWefnGOUc HTTP/1.1" 200 None
+2024-04-17 20:54:27,625 - INFO - 127.0.0.1 - - [17/Apr/2024 20:54:27] "POST /login HTTP/1.1" 200 -
+2024-04-17 20:54:28,804 - INFO - 127.0.0.1 - - [17/Apr/2024 20:54:28] "GET /home HTTP/1.1" 200 -
+2024-04-17 20:54:29,991 - INFO - 127.0.0.1 - - [17/Apr/2024 20:54:29] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:54:49,398 - DEBUG - Starting new HTTPS connection (1): proyfinalpweb-default-rtdb.firebaseio.com:443
+2024-04-17 20:54:49,831 - DEBUG - https://proyfinalpweb-default-rtdb.firebaseio.com:443 "GET /users/eFfZ5vtSR2dKbFi0G6Yp89Zgdhl1/materia.json HTTP/1.1" 200 212
+2024-04-17 20:54:49,831 - INFO - [{'Clave': 'clave', 'FechaFin': '2024-04-22', 'FechaInicio': '2024-04-05', 'Nombre': 'materia', 'Semestre': '3'}, {'Clave': 'clave3', 'FechaFin': '2024-04-30', 'FechaInicio': '2024-04-13', 'Nombre': 'er5t6y7u8i9', 'Semestre': '7'}]
+2024-04-17 20:54:49,878 - DEBUG - https://proyfinalpweb-default-rtdb.firebaseio.com:443 "PUT /users/eFfZ5vtSR2dKbFi0G6Yp89Zgdhl1/materia/None.json HTTP/1.1" 200 104
+2024-04-17 20:54:49,878 - INFO - 127.0.0.1 - - [17/Apr/2024 20:54:49] "[32mPOST /alta_materia HTTP/1.1[0m" 302 -
+2024-04-17 20:54:49,894 - INFO - 127.0.0.1 - - [17/Apr/2024 20:54:49] "GET /materia HTTP/1.1" 200 -
+2024-04-17 20:55:54,823 - INFO - 127.0.0.1 - - [17/Apr/2024 20:55:54] "GET /materia HTTP/1.1" 200 -

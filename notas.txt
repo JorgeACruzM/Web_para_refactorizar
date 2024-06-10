@@ -1,0 +1,36 @@
+<div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Busca y Actualiza Materia</div>
+                    <div class="card-body">
+                        <form id="Update_Search_MateriaForm" method="POST">
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <select class="form-control" id="nombre">
+                                    <!-- Aquí puedes agregar opciones para el selector de nombre -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="clave">Clave:</label>
+                                <input type="text" class="form-control" id="clave" name="Clave" value="Cargando">
+                            </div>
+                            <div class="form-group">
+                                <label for="Semestre">Semestre:</label>
+                                <input type="text" class="form-control" id="Semestre" name="Semestre" value="Cargando">
+                            </div>
+                            <div class="form-group">
+                                <label for="FechaInicio">Fecha de Inicio:</label>
+                                <input type="date" class="form-control" id="FechaInicio" name="FechaInicio">
+                            </div>
+                            <div class="form-group">
+                                <label for="FechaFin">Fecha de Fin:</label>
+                                <input type="date" class="form-control" id="FechaFin" name="FechaFin">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

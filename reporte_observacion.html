@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="miApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta de Horario</title>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            margin-top: 50px;
+            flex: 1;
+        }
+
+        .containerbox {
+            margin-top: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        @media (max-width: 600px) {
+
+            table,
+            th,
+            td {
+                display: block;
+            }
+
+            th,
+            td {
+                padding: 10px;
+            }
+
+            th {
+                text-align: right;
+            }
+
+            td {
+                text-align: left;
+                border: none;
+                position: relative;
+                padding-left: 50%;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 10px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body ng-controller="MainController" id="ResultadoHorario">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mi Aplicación</a>
+            <!-- Botón solo para pantallas pequeñas -->
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="dropdown">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right d-lg-none">
+                <a class="dropdown-item" href="/profile">Perfil</a>
+                <a class="dropdown-item" href="/materia">Materia</a>
+                <a class="dropdown-item" href="/profesor">Profesor</a>
+                <a class="dropdown-item" href="/plan_estudio">Plan de estudio</a>
+                <a class="dropdown-item" href="/horario">Horario</a>
+                <a class="dropdown-item" href="/observacion">Observaciones</a>
+                <a class="dropdown-item" href="/reporte">Reporte</a>
+                <a class="dropdown-item" href="/home">Inicio</a>
+                <a class="dropdown-item" href="/logout">Logout</a>
+            </div>
+            <!-- Elementos del menú para pantallas grandes -->
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto d-none d-lg-flex">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profile">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/materia">Materia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profesor">Profesor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/plan_estudio">Plan de estudio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/horario">Horario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/observacion">Observaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/reporte">Reporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        
+        <!-- Mensajes flash -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                <div class="alert alert-{{ category }} mt-3">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Alta de Horario</div>
+                    <div class="card-body">
+                        <form id="HorarioForm" method="POST" action="/alta_horario">
+                            <div class="form-group">
+                                <label for="Nombre">Nombre:</label>
+                                <input type="text" class="form-control" id="Nombre" name="Nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Clave">Clave:</label>
+                                <input type="text" class="form-control" id="Clave" name="Clave" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="HoraInicio">Hora de inicio:</label>
+                                <input type="time" class="form-control" id="HoraInicio" name="HoraInicio" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="HoraFin">Hora de fin:</label>
+                                <input type="time" class="form-control" id="HoraFin" name="HoraFin" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Dia">Día de la semana:</label>
+                                <select class="form-control" id="Dia" name="Dia">
+                                    <option value="Lunes">Lunes</option>
+                                    <option value="Martes">Martes</option>
+                                    <option value="Miércoles">Miércoles</option>
+                                    <option value="Jueves">Jueves</option>
+                                    <option value="Viernes">Viernes</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <!--</div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">-->
+            <div class="col-md-6">
+
+                <!--<div class="card">
+                    <div class="card-header">Buscar, Editar y Borrar Profesor</div>
+                    <div class="card-body">
+                        <form id="BuscarHorarioForm" method="POST" action="/buscar_horario">
+                            <div class="form-group">
+                                <label for="Clave">Clave del Horario:</label>
+                                <input type="text" class="form-control" id="Clave" name="Clave" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Buscar</button>
+                        </form>
+                        <div id="ResultadoHorario" style="margin-top: 20px;"></div>
+                    </div>
+                </div>-->
+
+                <div class="card">
+                    <div class="card-header">Buscar, Editar y Borrar Profesor</div>
+                    <div class="card-body">
+                        <form id="BuscarHorarioForm" ng-submit="buscarHorario()">
+                            <div class="form-group">
+                                <label for="Clave">Clave del Horario:</label>
+                                <input type="text" class="form-control" id="Clave" ng-model="claveHorario" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Buscar</button>
+                        </form>
+                        <div id="ResultadoHorario" style="margin-top: 20px;" ></div>
+                    </div>
+                </div>
+            </div>
+            <h1>Horario</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horario_id</th>
+                        <th>Clave</th>
+                        <th>Nombre</th>
+                        <th>Dia</th>
+                        <th>Hora Inicio</th>
+                        <th>Hora Fin</th>
+                        <th>Borrado Logico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for horario in horarios %}
+                    <tr>
+                        <td data-label="Horario_id">{{ horario['Horario_id'] }}</td>
+                        <td data-label="Clave">{{ horario['Clave'] }}</td>
+                        <td data-label="Nombre">{{ horario['Nombre'] }}</td>
+                        <td data-label="Dia">{{ horario['Dia'] }}</td>
+                        <td data-label="Hora Inicio">{{ horario['Hora_Inicio'] }}</td>
+                        <td data-label="Hora Fin">{{ horario['Hora_Fin'] }}</td>
+                        <td data-label="Borrado Logico">{{ horario['Borrado_Logico'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        /*$(document).ready(function () {
+            $('#BuscarHorarioForm').submit(function (event) {
+                event.preventDefault();
+                var clave = $('#Clave').val();
+                $.ajax({
+                    type: 'POST',
+                    url: '/buscar_horario',
+                    data: { Clave: clave },
+                    success: function (response) {
+                        $('#ResultadoHorario').html(response);
+                    },
+                    error: function (error) {
+                        alert('Error al buscar la horario.');
+                    }
+                });
+            });
+        });*/
+
+        angular.module('miApp', [])
+        .controller('MainController', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
+            $scope.claveHorario = '';
+            $scope.resultadoHorario = '';
+
+            $scope.buscarHorario = function() {
+                var data = $.param({ Clave: $scope.claveHorario });
+
+                var config = {
+                    headers : { 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;' }
+                };
+
+                $http.post('/buscar_horario', data, config)
+                .then(function(response) {
+                    
+                    if (response.data) {
+                        //$scope.resultadoHorario = $sce.trustAsHtml(response.data);
+                        $('#ResultadoHorario').html(response.data);
+                    } else {
+                        alert('No se encontró el Horario con la Clave especificada.');
+                    }
+                })
+                .catch(function(error) {
+                    alert('Error al buscar el horario.');
+                    console.error('Error:', error);
+                });
+            };
+        }]);
+
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-BF4CVtn1r4r4b8ck/hssB5hVraEK6noNoofI+g9jEoqhcFshp0RrHoNhVK1C1tbK"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#HorarioForm').submit(function (event) {
+                event.preventDefault();
+                fetch('/alta_horario', {
+                    method: 'POST',
+                    body: new FormData(this)
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Error en el horario.');
+                        }
+                        alert('Registro exitoso.');
+                        window.location.href = "/horario";
+                    })
+                    .catch(error => {
+                        alert(error.message);
+                        console.error('Error:', error);
+                    });
+            });
+        });
+    </script>
+</body>
+
+</html>

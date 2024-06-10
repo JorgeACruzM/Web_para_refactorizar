@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de horario</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            margin-top: 50px;
+            flex: 1;
+        }
+
+        .navbar-custom {
+            background-color: #001b66; /* Azul marino */
+        }
+        .navbar-custom .navbar-nav .nav-link {
+            color: #ffffff; /* Color del texto */
+        }
+        .navbar-custom .navbar-brand {
+            color: #ffffff; /* Color del texto del brand */
+        }
+
+        .footer {
+            background-color: #001b66; /* Azul marino */
+            color: #ffffff; /* Texto blanco */
+            padding: 40px 0;
+        }
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+        .footer-column h3 {
+            border-bottom: 1px solid #ffffff;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .footer-column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        .footer-column ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+        .footer-logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .footer-logo img {
+            height: 60px;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            background-color: #001b66; /* Azul más oscuro */
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        @media (max-width: 600px) {
+
+            table,
+            th,
+            td {
+                display: block;
+            }
+
+            th,
+            td {
+                padding: 10px;
+            }
+
+            th {
+                text-align: right;
+            }
+
+            td {
+                text-align: left;
+                border: none;
+                position: relative;
+                padding-left: 50%;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 10px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="/home">
+                <img src="static/logo la salle.png" alt="Logo" style="height: 60px;">
+            </a>
+            <!-- Botón solo para pantallas pequeñas -->
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="dropdown">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right d-lg-none">
+                <a class="dropdown-item" href="/home">Inicio</a>
+                <a class="dropdown-item" href="/profile">Perfil</a>
+                <a class="dropdown-item" href="/horario">Horario</a>
+                <a class="dropdown-item" href="/profesor">Profesor</a>
+                <a class="dropdown-item" href="/materia">Materia</a>
+                <a class="dropdown-item" href="/plan_estudio">Plan de estudio</a>
+                <a class="dropdown-item" href="/observacion">Observaciones</a>
+                <a class="dropdown-item" href="/reporte">Reporte</a>
+                <a class="dropdown-item" href="/logout">Logout</a>
+            </div>
+            <!-- Elementos del menú para pantallas grandes -->
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto d-none d-lg-flex">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profile">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/horario">Horario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profesor">Profesor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/materia">Materia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/plan_estudio">Plan de estudio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/observacion">Observaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/reporte">Reporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5">
+        <h1>Horario en las Materias</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Materia ID</th>
+                    <th>Materia Clave</th>
+                    <th>Horario Nombre</th>
+                    <th>Horario Clave</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for materia in materias %}
+                <tr>
+                    <td data-label="Materia ID">{{ materia['Materia_id'] }}</td>
+                    <td data-label="Materia Clave">{{ materia['Materia_Clave'] }}</td>
+                    <td data-label="Horario nombre">{{ materia['Horario_nombre'] }}</td>
+                    <td data-label="Horario Clave">{{ materia['Horario_Clave'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h2 class="text-center">Detalles de Horario</h2>
+        <form id="horarioForm" method="POST" action="/actualizar_horario">
+            <div class="form-group">
+                <label for="Nombre">Nombre:</label>
+                <input type="text" class="form-control" id="Nombre" name="Nombre" value="{{ horario.Nombre }}" readonly
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="HoraInicio">Hora de inicio:</label>
+                <input type="time" class="form-control" id="HoraInicio" name="HoraInicio"
+                    value="{{ horario.Hora_Inicio }}" readonly required>
+            </div>
+            <div class="form-group">
+                <label for="HoraFin">Hora de fin:</label>
+                <input type="time" class="form-control" id="HoraFin" name="HoraFin" value="{{ horario.Hora_Fin }}"
+                    readonly required>
+            </div>
+            <div class="form-group">
+                <label for="Dia">Día de la semana:</label>
+                <select class="form-control" id="Dia" name="Dia" readonly>
+                    <option value="Lunes" {% if horario.Dia=="Lunes" %} selected {% endif %}>Lunes</option>
+                    <option value="Martes" {% if horario.Dia=="Martes" %} selected {% endif %}>Martes</option>
+                    <option value="Miércoles" {% if horario.Dia=="Miércoles" %} selected {% endif %}>Miércoles</option>
+                    <option value="Jueves" {% if horario.Dia=="Jueves" %} selected {% endif %}>Jueves</option>
+                    <option value="Viernes" {% if horario.Dia=="Viernes" %} selected {% endif %}>Viernes</option>
+                </select>
+            </div>
+            <div class="btn-group d-flex justify-content-center" role="group" aria-label="Acciones">
+                <button type="button" class="btn btn-primary" id="editarBtn">Editar</button>
+                <button type="button" class="btn btn-danger" id="bajalogicaBtn">Baja Lógica</button>
+                <a href="/borrar_horario?Horario_id={{ horario.Horario_id }}" class="btn btn-danger" id="eliminarBtn">Baja Física</a>                
+                <button type="button" class="btn btn-secondary" id="cancelarBtn">Cancelar</button>
+                <button type="submit" class="btn btn-success" id="guardarBtn" style="display: none;">Guardar</button>
+            </div>
+            <input type="hidden" id="Horario_id" name="Horario_id" value="{{ horario.Horario_id }}">
+            
+        </form>
+    </div>
+    <br>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="static/logo la salle.png" alt="Logo La Salle">
+            </div>
+            <div class="footer-column">
+                <h3>Oferta educativa</h3>
+                <ul>
+                    <li><a href="#">Preparatoria</a></li>
+                    <li><a href="#">Licenciaturas</a></li>
+                    <li><a href="#">Especialidades</a></li>
+                    <li><a href="#">Maestrías</a></li>
+                    <li><a href="#">Doctorados</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Nosotros</h3>
+                <ul>
+                    <li><a href="#">La Salle Hoy</a></li>
+                    <li><a href="#">Sistema y Red La Salle</a></li>
+                    <li><a href="#">Identidad</a></li>
+                    <li><a href="#">Historia</a></li>
+                    <li><a href="#">Ideario</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Experiencia La Salle</h3>
+                <ul>
+                    <li><a href="#">Acreditaciones</a></li>
+                    <li><a href="#">Área curricular</a></li>
+                    <li><a href="#">Barrio universitario</a></li>
+                    <li><a href="#">Comunidad para la vida</a></li>
+                    <li><a href="#">Formación integral</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Universidad La Salle México. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS, jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-BF4CVtn1r4r4b8ck/hssB5hVraEK6noNoofI+g9jEoqhcFshp0RrHoNhVK1C1tbK"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#editarBtn').click(function () {
+                // Habilitar la edición de los campos
+                $('input').prop('readonly', false);
+                // Mostrar el botón de guardar y ocultar el botón de editar
+                $('#editarBtn').hide();
+                $('#guardarBtn').show();
+            });
+
+            $('#guardarBtn').click(function () {
+                if (confirm("¿Estás seguro de que deseas guardar los cambios?")) {
+                    var Horario_id = $('#Horario_id').val();
+                    $.ajax({
+                        type: 'POST',
+                        url: '/actualizar_horario',
+                        data: $('#horarioForm').serialize() + '&Horario_id=' + Horario_id,
+                        success: function (response) {
+                            alert('Información actualizada correctamente.');
+                            window.location.href = '/horario';
+                        },
+                        error: function (error) {
+                            alert('Error al actualizar la información.');
+                        }
+                    });
+                }
+            });
+
+            $('#cancelarBtn').click(function () {
+                // Deshabilitar la edición de los campos
+                $('input').prop('readonly', true);
+                // Ocultar el botón de guardar y mostrar el botón de editar
+                $('#guardarBtn').hide();
+                $('#editarBtn').show();
+            });
+
+            $('#guardarBtn').click(function () {
+                if (confirm("¿Estás seguro de que deseas guardar los cambios?")) {
+                    var Horario_id = $('#Horario_id').val();
+                    var Nombre = $('#Nombre').val();
+                    var Clave = $('#Clave').val();
+                    var HoraInicio = $('#HoraInicio').val();
+                    var HoraFin = $('#HoraFin').val();
+
+                    // Verificar que los campos Nombre, Clave, Hora de inicio y Hora de fin no estén vacíos
+                    if (Nombre.trim() === '' || Clave.trim() === '' || HoraInicio.trim() === '' || HoraFin.trim() === '') {
+                        alert('Por favor, complete todos los campos.');
+                        return false; // Detiene el envío del formulario si los campos están vacíos
+                    }
+
+                    $.ajax({
+                        type: 'POST',
+                        url: '/actualizar_horario',
+                        data: $('#horarioForm').serialize() + '&Horario_id=' + Horario_id,
+                        success: function (response) {
+                            alert('Información actualizada correctamente.');
+                            window.location.href = '/horario';
+                        },
+                        error: function (error) {
+                            alert('Error al actualizar la información.');
+                        }
+                    });
+                }
+            });
+
+            $('#cancelarBtn').click(function () {
+                // Deshabilitar la edición de los campos
+                $('input').prop('readonly', true);
+                // Ocultar el botón de guardar y mostrar el botón de editar
+                $('#guardarBtn').hide();
+                $('#editarBtn').show();
+            });
+
+            
+
+            $('#bajalogicaBtn').click(function () {
+                if (confirm("¿Estás seguro de que deseas eliminar lógicamente este horario?")) {
+                    var Horario_id = $('#Horario_id').val();
+                    $.ajax({
+                        type: 'POST',
+                        url: '/baja_logica_horario',
+                        data: { Horario_id: Horario_id },
+                        success: function (response) {
+                            alert('Baja lógica de horario correcta.');
+                            window.location.href = '/horario';
+                        },
+                        error: function (error) {
+                            alert('Error al eliminar el horario lógicamente.');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
