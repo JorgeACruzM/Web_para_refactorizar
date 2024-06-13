@@ -315,6 +315,7 @@
                     {% endfor %}
                 </tbody>
             </table>
+            <button onclick="downloadExcel('materia')">Descargar Excel</button>
         </div>
     </div>
     <br>
@@ -361,6 +362,10 @@
     </footer>
 
     <script>
+        function downloadExcel(tabla) {
+            window.location.href = '/download_excel?tabla=' + encodeURIComponent(tabla);
+        }
+
         $(document).ready(function () {
             $('#BuscarMateriaForm').submit(function (event) {
                 event.preventDefault();

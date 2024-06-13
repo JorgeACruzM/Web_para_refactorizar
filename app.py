@@ -1,11 +1,15 @@
 import flask
-from flask import Flask, render_template, request, redirect, session, flash
+from flask import Flask, render_template, request, redirect, session, flash, send_file
+from io import BytesIO
+import pandas as pd
 from flask import url_for
 from collections import OrderedDict
 import requests
 import json
 import pyrebase
 import traceback
+from datetime import datetime
+
 
 #TODO Agregar columna baja logica a las tablas
 
@@ -1324,6 +1328,59 @@ def reporte():
     # Pasar los datos a la plantilla HTML
     return render_template('reporte.html', horarios=horarios, usuarios=usuarios, materias=materias,
                            observaciones=observaciones, profesores=profesores, plan_de_estudio=plan_de_estudio )
+
+
+@app.route('/download_excel')
+def download_excel():
+    Tabla = request.args.get('tabla', type=str)
+    
+    if not Tabla:
+        return "No se proporcionó ninguna tabla", 400
+
+    # Datos de ejemplo para la tabla (estos deberían ser los mismos que muestras en pantalla)
+    try:
+        data = db.child(Tabla).get().val()
+    except Exception as e:
+        return f"Error al obtener los datos: {str(e)}", 500
+
+    if not data:
+        return "No se encontraron datos para la tabla especificada", 404
+
+    try:
+        # Crear un DataFrame con pandas
+        df = pd.DataFrame(data)
+    except Exception as e:
+        return f"Error al crear DataFrame: {str(e)}", 500
+
+    # Guardar el DataFrame en un archivo Excel en memoria
+    output = BytesIO()
+    try:
+        # Crear el escritor de Excel
+        with pd.ExcelWriter(output, engine='openpyxl') as writer:
+            # Especificar que la hoja 'Reporte' está visible
+            writer.book.create_sheet('Reporte')
+            writer.book.active = writer.book.sheetnames.index('Reporte')
+
+            # Escribir el encabezado
+            worksheet = writer.sheets['Reporte']
+            worksheet['A1'] = 'Universidad la Salle'
+            worksheet['A2'] = f'Reporte de {Tabla}'
+            worksheet['A3'] = f'Fecha: {datetime.now().strftime("%Y-%m-%d")}'
+
+            # Escribir el DataFrame a partir de la fila 5
+            df.to_excel(writer, startrow=4, index=False, sheet_name='Reporte')
+
+            # Escribir el total de registros al final
+            worksheet.cell(row=5 + len(df) + 1, column=1, value=f'Total de registros: {len(df)}')
+
+        output.seek(0)
+    except Exception as e:
+        return f"Error al guardar el DataFrame en Excel: {str(e)}", 500
+
+    # Enviar el archivo Excel como una respuesta de descarga
+    return send_file(output, download_name='reporte.xlsx', as_attachment=True)
+
+
 
 
 if __name__ == '__main__':
