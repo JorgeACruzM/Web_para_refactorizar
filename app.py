@@ -9,6 +9,8 @@ import json
 import pyrebase
 import traceback
 from datetime import datetime
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
 
 
 #TODO Agregar columna baja logica a las tablas
@@ -1380,6 +1382,72 @@ def download_excel():
     # Enviar el archivo Excel como una respuesta de descarga
     return send_file(output, download_name=f'reporte_{Tabla}.xlsx', as_attachment=True)
 
+#TODO La funcion si genera el reporte, pero la tabla sale cortada por lo que hay que arregarlo
+@app.route('/download_pdf')
+def download_pdf():
+    Tabla = request.args.get('tabla', type=str)
+    
+    if not Tabla:
+        return "No se proporcionó ninguna tabla", 400
+
+    # Datos de ejemplo para la tabla (estos deberían ser los mismos que muestras en pantalla)
+    try:
+        data = db.child(Tabla).get().val()
+    except Exception as e:
+        return f"Error al obtener los datos: {str(e)}", 500
+
+    if not data:
+        return "No se encontraron datos para la tabla especificada", 404
+
+    try:
+        # Crear un DataFrame con pandas
+        df = pd.DataFrame(data)
+    except Exception as e:
+        return f"Error al crear DataFrame: {str(e)}", 500
+
+    # Crear un archivo PDF en memoria
+    output = BytesIO()
+    try:
+        # Crear el PDF con reportlab
+        c = canvas.Canvas(output, pagesize=letter)
+        width, height = letter
+
+        # Escribir encabezados
+        c.drawString(100, height - 50, "Universidad la Salle")
+        c.drawString(100, height - 70, f"Reporte de {Tabla}")
+        c.drawString(100, height - 90, f"Fecha: {datetime.now().strftime('%Y-%m-%d')}")
+
+        # Escribir el DataFrame a partir de la posición (x, y)
+        y_position = height - 130
+        x_position = 100
+        for col in df.columns:
+            c.drawString(x_position, y_position, col)
+            x_position += 100
+
+        y_position -= 20
+        x_position = 100
+        for index, row in df.iterrows():
+            for value in row:
+                c.drawString(x_position, y_position, str(value))
+                x_position += 100
+            y_position -= 20
+            x_position = 100
+
+            # Crear una nueva página si no hay suficiente espacio
+            if y_position < 50:
+                c.showPage()
+                y_position = height - 50
+
+        # Escribir el total de registros
+        c.drawString(100, y_position - 20, f"Total de registros: {len(df)}")
+        
+        c.save()
+        output.seek(0)
+    except Exception as e:
+        return f"Error al guardar el DataFrame en PDF: {str(e)}", 500
+
+    # Enviar el archivo PDF como una respuesta de descarga
+    return send_file(output, download_name=f'reporte_{Tabla}.pdf', as_attachment=True)
 
 
 

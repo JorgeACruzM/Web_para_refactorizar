@@ -325,6 +325,8 @@
                 </tbody>
             </table>
             <button type="submit" class="btn btn-primary" onclick="downloadExcel('horario')">Descargar Excel</button>
+            <button type="submit" class="btn btn-primary" onclick="downloadPDF('horario')">Descargar PDF</button>
+
         </div>
     </div>
     <br>
@@ -390,6 +392,9 @@
         });*/
         function downloadExcel(tabla) {
             window.location.href = '/download_excel?tabla=' + encodeURIComponent(tabla);
+        }
+        function downloadPDF(tabla) {
+            window.location.href = '/download_pdf?tabla=' + encodeURIComponent(tabla);
         }
 
         angular.module('miApp', [])
