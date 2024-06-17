@@ -291,6 +291,7 @@
                     {% endfor %}
                 </tbody>
             </table>
+            <button type="submit" class="btn btn-primary" onclick="downloadExcel('observacion')">Descargar Excel</button>
         </div>
     </div>
     <br>
@@ -343,6 +344,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
+        function downloadExcel(tabla) {
+            window.location.href = '/download_excel?tabla=' + encodeURIComponent(tabla);
+        }
         /*$(document).ready(function () {
             $('#BuscarObservacionesForm').submit(function (event) {
                 event.preventDefault();

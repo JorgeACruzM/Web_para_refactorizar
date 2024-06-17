@@ -289,6 +289,7 @@
                     {% endfor %}
                 </tbody>
             </table>
+            <button type="submit" class="btn btn-primary" onclick="downloadExcel('plan_estudios')">Descargar Excel</button>
         </div>
     </div>
     <br>
@@ -335,6 +336,10 @@
     </footer>
 
     <script>
+        function downloadExcel(tabla) {
+            window.location.href = '/download_excel?tabla=' + encodeURIComponent(tabla);
+        }
+
         $(document).ready(function () {
             $('#BuscarPlanEstudiosForm').submit(function (event) {
                 event.preventDefault();

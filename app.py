@@ -1378,7 +1378,7 @@ def download_excel():
         return f"Error al guardar el DataFrame en Excel: {str(e)}", 500
 
     # Enviar el archivo Excel como una respuesta de descarga
-    return send_file(output, download_name='reporte.xlsx', as_attachment=True)
+    return send_file(output, download_name=f'reporte_{Tabla}.xlsx', as_attachment=True)
 
 
 
